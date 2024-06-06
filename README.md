@@ -7,72 +7,16 @@
 <p align="center">O projeto Diaphora é uma solução inovadora destinada a auxiliar psicopedagogo e psicólogos no apoio a pessoas com Transtorno de Déficit de Atenção e Hiperatividade (TDAH) a melhorar a sua concentração e habilidades de foco no dia a dia. O dispositivo principal do projeto é uma caixa equipada com um sistema de reforço positivo que só é aberta após a execução de uma determinada sequência de luzes.</p>
 
 # ⚙️Componentes
-## Arduino Uno
-● Botões
-● LEDs
-● Resistores
-● Jumpers
-● Servo Motor
-● lCD
-## Ligações dos Componentes no Arduino
-1º. Servo Motor
+● Arduino Uno
+● 3 Botões
+● 3 leds
+● 4 Resistores
+● No Mimimo 30 Jumpers
+● 2 Servos Motores
+● 1 LCD I2C
+● Uma caixa de MDF de 13x18,5 cm
 
-- Pino de Sinal: Conecte ao pino digital 11 do Arduino.
-- Pino de Energia (VCC): Conecte ao pino 5V do Arduino.
-- Pino de Terra (GND): Conecte ao pino GND do Arduino.
-  
-2º. Botões
-- Botão Verde:
-- Um pino do botão: Conecte ao pino digital 2 do Arduino.
-- Outro pino do botão: Conecte ao GND do Arduino (com pull-up interno ativado
-no código).
-- Botão Vermelho:
-- Um pino do botão: Conecte ao pino digital 3 do Arduino.
-- Outro pino do botão: Conecte ao GND do Arduino (com pull-up interno ativado
-no código).
-
-3º. LEDs RGB
-- Os LEDs RGB têm três pinos: um pino comum (anodo ou catodo) e dois pinos para
-controlar as cores. Neste caso, estamos usando LEDs RGB ou LEDs comuns de cores
-diferentes, então cada LED terá seu próprio pino de controle.
-- LED Verde 1: Conecte ao pino digital 4 do Arduino.
-- LED Vermelho 1: Conecte ao pino digital 5 do Arduino.
-- LED Verde 2: Conecte ao pino digital 6 do Arduino.
-- LED Vermelho 2: Conecte ao pino digital 7 do Arduino.
-- LED Verde 3: Conecte ao pino digital 8 do Arduino.
-- LED Vermelho 3: Conecte ao pino digital 9 do Arduino.
-Para cada LED:
-- Pino de Controle do LED: Conecte ao pino correspondente do Arduino (conforme listado
-acima).
-- Pino Comum do LED (anodo ou catodo):
-- Se estiver usando LEDs comuns (comum cátodo), conecte o pino comum ao
-GND do Arduino.
-- Se estiver usando LEDs RGB (comum ânodo), conecte o pino comum ao 5V do
-Arduino.
- 
-4º. Resistores 
-- Para proteger os LEDs e garantir que eles funcionem corretamente, utilize
-resistores.
-- Resistores de 220 ohms (ou valor adequado para os LEDs em uso) devem ser
-conectados em série com cada LED.
-# Diagrama de Ligações
-- |Arduino|-------------------------------------------|Componentes|
-- GND------------------------------------------------> GND do Servo Motor
-- 5V--------------------------------------------------> VCC do Servo Motor
-- pino 11---------------------------------------------> Pino de Sinal do Servo Motor
-- pino 2----------------------------------------------> Um pino do Botão Verde
-- GND------------------------------------------------> Outro pino do Botão Verde (Pull-up interno)
-- pino 3----------------------------------------------> Um pino do Botão Vermelho
-- GND------------------------------------------------> Outro pino do Botão Vermelho (Pull-up interno)
-- pino 4----------------------------------------------> LED Verde 1 (via resistor)
-- pino 5----------------------------------------------> LED Vermelho 1 (via resistor)
-- pino 6----------------------------------------------> LED Verde 2 (via resistor)
-- pino 7----------------------------------------------> LED Vermelho 2 (via resistor)
-- pino 8----------------------------------------------> LED Verde 3 (via resistor)
-- pino 9----------------------------------------------> LED Vermelho 3 (via resistor)
-- GND/5V--------------------------------------------> Pino comum dos LEDs (dependendo do tipo de LED)
-
-# 📝Funcionamento do Codigo
+# 📝Principais Funções do Codigo
 - setup()  
 Inicializa as configurações do Arduino, incluindo pinos, LCD e servos.
 - loop()  
@@ -95,5 +39,14 @@ Atualiza o cronômetro no LCD quando ele está em execução.
 - Wire.h: Comunicação I2C para o LCD.
 - LiquidCrystal_I2C.h: Controle do LCD via I2C.
 - Servo.h: Controle dos servos motores.
+## Como isntalar o codigo
+- Baixe o Arduine IDE na sua máquina, instale as bibliotecas necessárias e logo após isso copie o codigo dentro da IDE. No mais, certifique-se de
+verificar se todos os botões e led estão localizados nas posições corretas conforme o código, após isso selecione dentro da IDE a porta logica necessária 
+para a conexão do prototipo com sua máquina e pode complilar o codigo.
+## Link dos tutorias
+ - 
+ -  
 ## 🙋‍♂️ Criado por:
 - [Matheus Lustosa](https://github.com/MatheusLustosa)
+- [Rodrigo Tenório](https://github.com/RodrigoBLT)
+- [Pedro Barreto](https://github.com/pedromb2005)
