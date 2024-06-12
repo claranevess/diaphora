@@ -37,7 +37,7 @@ verificar se todos os botões e led estão localizados nas posições corretas c
 para a conexão do prototipo com sua máquina e pode complilar o codigo.
 
 ## Link dos tutoriais
- - 
+ - [Tutorial](https://docs.google.com/document/d/1z8c_tpCCDyLX_6fZ8_3Py6qJdjadAjiPmz-lc0dah34/)
  -
    
 ## 🙋‍♂️ Criado por:
